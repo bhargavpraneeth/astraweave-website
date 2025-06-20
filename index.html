@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstraWeave - Empowering Careers</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f6fc;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #283593;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #3f51b5;
+      animation: slideDown 1s ease-out;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #303f9f;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    ul {
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    .box {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to AstraWeave</h1>
+  <p>Personalized Career Coaching for Indian Students & Professionals</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showTab('home')">Home</a>
+  <a href="#" onclick="showTab('job')">Job Seeker</a>
+  <a href="#" onclick="showTab('switch')">Career Switch</a>
+  <a href="#" onclick="showTab('civil')">Civil Services</a>
+</nav>
+
+<!-- Home -->
+<section id="home" class="active">
+  <div class="box">
+    <h2>What AstraWeave Does Better Than AI Tools</h2>
+    <ul>
+      <li>✅ Real human mentorship with structured roadmaps</li>
+      <li>✅ Indian education & competitive exam support</li>
+      <li>✅ Parent & mentor dashboards for support & transparency</li>
+      <li>✅ Motivation nudges, habit tracking, and community connect</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h2>Key Features</h2>
+    <ul>
+      <li>📅 Career Trackers & Weekly Plans</li>
+      <li>📊 Parent View to track progress</li>
+      <li>💼 Resume + GitHub Portfolio Tools</li>
+      <li>📚 Learning Plans with YouTube, Telegram & Coaching</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Scenario 1 -->
+<section id="job">
+  <div class="box">
+    <h2>Scenario 1: B.Tech Student → Tech Job</h2>
+    <p><strong>Goal:</strong> Land a tech job by 2026</p>
+    <ul>
+      <li>📌 Weekly LeetCode + DSA Challenges</li>
+      <li>🗂 GitHub Projects + Resume Checkpoints</li>
+      <li>📊 Tracker: Internships, Certifications, and Referrals</li>
+      <li>👨‍👩‍👦 Parent dashboard to view effort and motivation</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Scenario 2 -->
+<section id="switch">
+  <div class="box">
+    <h2>Scenario 2: IT Professional → Data Scientist</h2>
+    <p><strong>Goal:</strong> Transition into data science within 9 months</p>
+    <ul>
+      <li>📈 Curated AI/ML, SQL, Python study plans</li>
+      <li>🛠 Project workspace with milestone guidance</li>
+      <li>📋 Resume revamp and role targeting support</li>
+      <li>🧭 Accountability nudges for career switchers</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Scenario 3 -->
+<section id="civil">
+  <div class="box">
+    <h2>Scenario 3: B.Tech + Civil Services</h2>
+    <p><strong>Goal:</strong> Crack TSPSC Group 1 while pursuing B.Tech</p>
+    <ul>
+      <li>📚 Dual planner: Academic + GS subjects</li>
+      <li>⏱ Timer tools, Daily streak tracker</li>
+      <li>📖 Booklist, coaching suggestions, past year question analysis</li>
+      <li>👨‍👩‍👦 Progress visibility for parents and teachers</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
